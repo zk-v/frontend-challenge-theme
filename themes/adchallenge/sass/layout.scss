@@ -1,0 +1,83 @@
+@import 'variables.scss';
+@import 'breakpoints.scss';
+
+:root {
+  font-size: $root;
+  line-height: 24px;
+}
+
+body {
+  font-family: $playfair; // main font
+}
+
+main {
+  max-width: $max; // restrict width of the content on large screens
+  margin-bottom: $offset;
+  padding: $gutter-sm;
+  margin: $gutter-lg auto ($gutter-lg * 2) auto;
+
+  @include for-tablet-landscape-up {
+    margin: ($offset * 2) auto;
+  }
+}
+
+#block-homepage-top-content {
+  margin-bottom: $offset;
+}
+
+h2 {
+  margin: $gutter-sm 0;
+}
+
+.field.field--type-text-with-summary h2,
+.node--type-article h2 a,
+.field--name-title,
+.page-title {
+  position: relative; // anchors the line to the title
+  font-size: $title;
+  text-decoration: none;
+  color: $main-color;
+}
+
+.field.field--type-text-with-summary h2::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 4px;
+  background-color: $main-color;
+  top: -$gutter-sm;
+}
+
+.field.field--name-field-tags, #block-views-block-news-block-1 h2 {
+  color: $main-color-light;
+  text-transform: uppercase;
+  margin-bottom: $gutter-sm;
+  font-size: $text;
+  font-family: $ubuntu;
+}
+
+.page-node-type-article .field.field--name-field-tags {
+  margin-bottom: $gutter-lg;
+}
+
+.field--name-field-image img, .caption-img img, .filter-image-invalid {
+  filter: grayscale(0.75); // make images appear less saturated
+}
+
+.view-frontpage {
+  .view-content {
+    display: grid;
+    grid-gap: $gutter-lg;
+
+    @include for-tablet-landscape-up {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .views-row {
+      @include for-tablet-landscape-up {
+        padding: $gutter-sm 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+$max: 960px;
+
+@mixin for-tablet-and-mobile {
+  @media (max-width: 899px) { @content; }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}

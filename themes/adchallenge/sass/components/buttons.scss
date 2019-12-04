@@ -1,0 +1,15 @@
+@import '../variables.scss';
+
+.button--primary, .form-submit {
+  background: $btn-primary;
+  border: 1px solid $btn-primary;
+  outline: none;
+  color: #fff;
+  padding: 1em 1.5em;
+  transition: all 250ms;
+
+  &:hover {
+    background: transparent;
+    color: $btn-primary;
+  }
+}

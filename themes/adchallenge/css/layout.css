@@ -1,0 +1,81 @@
+:root {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+body {
+  font-family: "playfair", sans-serif;
+}
+
+main {
+  max-width: 960px;
+  margin-bottom: 70px;
+  padding: 1rem;
+  margin: 2rem auto 4rem auto;
+}
+@media (min-width: 900px) {
+  main {
+    margin: 140px auto;
+  }
+}
+
+#block-homepage-top-content {
+  margin-bottom: 70px;
+}
+
+h2 {
+  margin: 1rem 0;
+}
+
+.field.field--type-text-with-summary h2,
+.node--type-article h2 a,
+.field--name-title,
+.page-title {
+  position: relative;
+  font-size: 2.143rem;
+  text-decoration: none;
+  color: #626262;
+}
+
+.field.field--type-text-with-summary h2::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 4px;
+  background-color: #626262;
+  top: -1rem;
+}
+
+.field.field--name-field-tags, #block-views-block-news-block-1 h2 {
+  color: #b4ad9e;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-family: "ubuntu", sans-serif;
+}
+
+.page-node-type-article .field.field--name-field-tags {
+  margin-bottom: 2rem;
+}
+
+.field--name-field-image img, .caption-img img, .filter-image-invalid {
+  filter: grayscale(0.75);
+}
+
+.view-frontpage .view-content {
+  display: grid;
+  grid-gap: 2rem;
+}
+@media (min-width: 900px) {
+  .view-frontpage .view-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 900px) {
+  .view-frontpage .view-content .views-row {
+    padding: 1rem 0;
+  }
+}
+
+/*# sourceMappingURL=layout.css.map */

@@ -1,0 +1,57 @@
+@charset "UTF-8";
+main {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 900px) {
+  main {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+}
+main .layout-content {
+  margin: 0 1rem;
+}
+main figure {
+  margin: 2rem 0 1rem 0;
+}
+main figure figcaption {
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+main figure figcaption::before, main figure figcaption::after {
+  content: '"';
+}
+main img {
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+main img.image-style-article-teaser {
+  width: auto;
+  max-width: 100%;
+}
+main aside {
+  margin: 0 1rem;
+}
+main aside img {
+  width: 250px;
+  height: auto;
+}
+main aside ul {
+  list-style: none;
+}
+main aside ul li::before {
+  content: "•";
+  color: #626262;
+  position: absolute;
+  display: inline-block;
+  margin-left: -1rem;
+}
+main aside ul a {
+  color: #626262;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=single-page.css.map */

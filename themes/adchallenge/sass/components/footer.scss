@@ -1,0 +1,41 @@
+@import '../variables.scss';
+@import '../breakpoints.scss';
+
+footer {
+  padding: $gutter-lg $gutter-sm;
+  background: $bg-color;
+  a {
+    color: $main-color-dark;
+    text-decoration: none;
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: $main-color;
+    }
+  }
+  .region.region-footer {
+    text-align: center;
+
+    @include for-tablet-landscape-up {
+      display: flex;
+    }
+
+    ul {
+      display: flex;
+
+      @include for-tablet-and-mobile {
+        justify-content: center;
+      }
+
+      li {
+        padding: 0 $gutter-sm;
+      }
+    }
+
+    #block-footercreated {
+      margin-left: auto; // pull copyright to the right
+    }
+  }
+}

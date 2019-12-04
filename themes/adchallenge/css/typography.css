@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "playfair";
+  src: url("../fonts/PlayfairDisplay-Regular.ttf");
+}
+@font-face {
+  font-family: "ubuntu";
+  src: url("../fonts/Ubuntu-Regular.ttf");
+}
+
+/*# sourceMappingURL=typography.css.map */

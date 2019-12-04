@@ -1,0 +1,14 @@
+.button--primary, .form-submit {
+  background: #ef3720;
+  border: 1px solid #ef3720;
+  outline: none;
+  color: #fff;
+  padding: 1em 1.5em;
+  transition: all 250ms;
+}
+.button--primary:hover, .form-submit:hover {
+  background: transparent;
+  color: #ef3720;
+}
+
+/*# sourceMappingURL=buttons.css.map */

@@ -1,0 +1,87 @@
+@import '../variables.scss';
+@import '../breakpoints.scss';
+
+header {
+  @include for-tablet-and-mobile {
+    display: flex;
+    justify-content: center;
+
+    .block-system-branding-block {
+      display: flex;
+      justify-content: center;
+    }
+  }  
+
+  @include for-tablet-landscape-up {
+    &.fixed {
+      background: $bg-color;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 2; // bring it to the front 
+      margin: 0;
+
+      & + main {
+        transform: translateY($offset); // compensate for the height of the removed navigation from the flow
+      }
+
+      .region-header {
+        margin: $gutter-sm 0;
+        padding-top: 0;
+        transform: scale(0.85);
+      }
+    }
+  }
+
+  .region-header {
+    padding-top: $gutter-sm;
+    margin: $navbar-height 0;
+    transition: all 450ms;
+  
+    @include for-tablet-landscape-up {
+      display: flex;
+    }
+  }
+}
+
+a.site-logo img {
+  margin-left: $gutter-lg;
+  max-height: $navbar-height;
+}
+
+.navigation.menu--main {
+  width: 100%;
+  display: flex;
+}
+
+.menu--main .menu {
+  @include for-tablet-landscape-up {
+    margin-left: auto;
+  }
+}
+
+.menu--main .menu-item {
+  display: inline; 
+    
+  a {
+    color: $main-color;
+    font-family: $playfair;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0 $gutter-lg;
+
+    &:last-of-type() {
+      margin: 0 0 0 $gutter-lg;
+    }
+
+    &:link,
+    &:visited,
+    &:active {
+      color: $main-color;
+    }
+    &:hover, &.is-active {
+      color: $main-color-dark;
+    }
+  }
+}

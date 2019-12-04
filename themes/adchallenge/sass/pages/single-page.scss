@@ -1,0 +1,69 @@
+@import '../variables.scss';
+@import '../breakpoints.scss';
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  @include for-tablet-landscape-up { 
+    flex-wrap: nowrap; 
+    flex-direction: row;
+  }
+
+  .layout-content {
+    margin: 0 $gutter-sm;
+  }
+
+  figure {
+    margin: $gutter-lg 0 $gutter-sm 0;
+
+    figcaption {
+      font-style: italic;
+      text-align: center;
+      margin-bottom: $gutter-sm;
+
+      &::before, &::after {
+        content: '"';
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    margin: $gutter-sm 0;
+    
+    &.image-style-article-teaser {
+      width: auto;
+      max-width: 100%;
+    }
+  }
+
+  aside {
+    
+    margin: 0 $gutter-sm;
+
+    img {
+      width: 250px;
+      height: auto;
+    }
+
+    ul {
+      list-style: none; // remove default list style and replace with colored dots
+
+      li::before {
+        content: "\2022";  
+        color: $main-color; 
+        position: absolute;
+        display: inline-block;
+        margin-left: -$gutter-sm;
+      }
+
+      a {
+        color: $main-color;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
